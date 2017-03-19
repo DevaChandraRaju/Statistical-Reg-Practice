@@ -15,7 +15,7 @@ Compare_Regression_Models <- function(actuals,predictions,modlenme){
   }
   else
   {
-    err_matrix <- matrix(data=regr.eval(trues = actuals, preds = predictions),ncol=4,byrow=F,dimnames=list(c(modlenme),c("a","b","c","d")))
+    err_matrix <- matrix(data=regr.eval(trues = actuals, preds = predictions),ncol=4,byrow=F,dimnames=list(c(modlenme),c('mae','mse','rmse','mape')))
     assign("cmp_mtx_reg",err_matrix,envir=.GlobalEnv)
   }
   print(cmp_mtx_reg)
